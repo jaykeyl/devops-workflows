@@ -14,7 +14,7 @@ on:
 
 jobs:
   run_python:                      
-    if: ${{ github.event.inputs.confirm == 'yes' }}
+    if: ${{ github.event.inputs.confirm == 'true' }}
     runs-on: ubuntu-latest
 
     steps:
