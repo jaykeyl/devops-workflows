@@ -14,7 +14,7 @@ on:
 
 jobs:
   run_python:                      
-    if: ${{ github.event.inputs.confirm == 'yes' }}
+    if: ${{ github.event.inputs.confirm == 'true' }}
     runs-on: ubuntu-latest
 
     steps:
@@ -25,9 +25,5 @@ jobs:
         uses: actions/setup-python@v4
         with:
           python-version: "3.10"
-
-      - name: Instalar dependencias
-        run: pip install -r requirements.txt
-
       - name: Ejecutar script
         run: python hola-mundo.py
